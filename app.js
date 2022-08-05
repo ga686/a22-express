@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 // 更改為動態路由
 app.get('/:content', (req, res) => {
-  res.render(req.params.content)
+  res.render('index',{content: req.params.content})
 })
 
 // 設置靜態檔案路徑
