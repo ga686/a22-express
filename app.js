@@ -9,18 +9,11 @@ app.set('view engine', 'handlebars')
 app.get('/', (req, res) => {
   res.render('index')
 })
-
-app.get('/about', (req, res) => {
-  res.render('about')
+// 更改為動態路由
+app.get('/:content', (req, res) => {
+  res.render(req.params.content)
 })
 
-app.get('/portfolio', (req, res) => {
-  res.render('portfolio')
-})
-
-app.get('/contact', (req, res) => {
-  res.render('contact')
-})
 // 設置靜態檔案路徑
 app.use(express.static('public'))
 
