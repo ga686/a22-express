@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
 
 app.use(express.static('public'))
 
-app.listen(port, () => console.log(`Express is running on http://local:${port}`))
+app.listen(port, () => console.log(`Express is running on http://localhost:${port}`))
